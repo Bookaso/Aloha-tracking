@@ -15,22 +15,29 @@ header {
     background-color: #cdc733;
     margin-bottom: 1em;
     box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.4);
+    width: 100vw;
+    position: fixed;
+    z-index: 99;
 }
 
 .header {
     display: inline-block;
     margin-left: 2em;
-    width: 50rem;
+    text-decoration: none;
+}
+.header a{
     color: rgba(0, 0, 0, 0.7);
     text-decoration: none;
-
 }
 
 
 .content {
     display: flex;
+    position: relative;
+    top: 50px;
     flex-wrap: wrap;
-    height: 90vh;
+    justify-content: center;
+    /* height: 90vh; */
 }
 
 .card {
@@ -38,8 +45,8 @@ header {
     flex-direction: column;
     justify-content: center;
     background-color: rgba(255, 255, 255, 0.541);
-    width: 200px;
-    height: 250px;
+    width: 150px;
+    height: 150px;
     text-align: center;
     border-radius: 5%;
     margin: 1em;
@@ -57,7 +64,7 @@ header {
 }
 
 img {
-    width: 80%;
+    width: 6rem;
     height: auto;
     border-radius: 50%;
     /* padding: 0.2em; */
@@ -67,7 +74,7 @@ img {
 .carriername {
     display: flex;
     justify-content: center;
-    font-size: 120%;
+    font-size: 80%;
     font-weight: 500;
 }
 

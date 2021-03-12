@@ -19,74 +19,6 @@ const header = {
     "Content-Type": "application/json"
 }
 
-const sample = {
-"trackingNo": "SHP5054369172",
-"courier": "เคอรี่ เอ็กซ์เพรส",
-"courierKey": "kerry-express",
-"color": "#FB8523",
-"status": "ON_DELIVERED",
-"currentStatus": "13:59 เคอรี่จัดส่งพัสดุของคุณเรียบร้อยแล้ว - คานหาม, พระนครศรีอยุธยา",
-"timelines": [
-    {
-      "date": "2021-02-10",
-      "details": [
-        {
-          "dateTime": "2021-02-10T13:59:56+07:00",
-          "date": "2021-02-10",
-          "time": "13:59",
-          "status": "ON_DELIVERED",
-          "description": "13:59 เคอรี่จัดส่งพัสดุของคุณเรียบร้อยแล้ว - คานหาม, พระนครศรีอยุธยา"
-        },
-        {
-          "dateTime": "2021-02-10T08:57:06+07:00",
-          "date": "2021-02-10",
-          "time": "08:57",
-          "status": "ON_SHIPPING",
-          "description": "08:57 พนักงานกำลังจัดส่งพัสดุของคุณ - คานหาม, พระนครศรีอยุธยา"
-        }
-      ]
-    },
-    {
-      "date": "2021-02-09",
-      "details": [
-        {
-          "dateTime": "2021-02-09T08:10:59+07:00",
-          "date": "2021-02-09",
-          "time": "08:10",
-          "status": "ON_OTHER_STATUS",
-          "description": "08:10 พัสดุของคุณถึงสาขาปลายทางแล้ว เตรียมจัดส่ง - คานหาม, พระนครศรีอยุธยา"
-        },
-        {
-          "dateTime": "2021-02-09T03:09:31+07:00",
-          "date": "2021-02-09",
-          "time": "03:09",
-          "status": "ON_OTHER_STATUS",
-          "description": "03:09 พัสดุของคุณอยู่ระหว่างขนส่ง - ตลิ่งชั่น, พระนครศรีอยุธยา"
-        }
-      ]
-    },
-    {
-      "date": "2021-02-08",
-      "details": [
-        {
-          "dateTime": "2021-02-08T22:03:55+07:00",
-          "date": "2021-02-08",
-          "time": "22:03",
-          "status": "ON_OTHER_STATUS",
-          "description": "22:03 พัสดุของคุณอยู่ระหว่างขนส่ง - ศูนย์คัดแยกสินค้าสมุทรสาคร, กรุงเทพมหานคร"
-        },
-        {
-          "dateTime": "2021-02-08T13:35:59+07:00",
-          "date": "2021-02-08",
-          "time": "13:35",
-          "status": "ON_PICKED_UP",
-          "description": "13:35 เคอรี่เข้ารับพัสดุแล้ว"
-        }
-      ]
-    }
-]
-};
-
 let carriers =[];
 let trackingData =[];
 
@@ -121,7 +53,7 @@ let carriername = req.params.carrier_name;
     console.log(carriername);
     carriers.forEach(carrier => {
         if (carrier.key === carriername) {
-            res.render("find",{thecarrier:carrier,data:sample})
+            res.render("find",{thecarrier:carrier,data:trackingData})
         }
     });
 });
