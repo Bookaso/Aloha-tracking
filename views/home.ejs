@@ -1,0 +1,18 @@
+<%- include('partials/header'); -%>
+<section class="content">
+
+    <% carriers.forEach(carrier => { %>
+    <form name="<%= carrier.key %>" action="/<%= carrier.key %> " method="GET">
+        <div class="card" onclick="document.forms['<%= carrier.key %>'].submit();">
+            <div class="image">
+                <img src=<%= carrier.imageURL %> alt="logo">
+            </div>
+            <div class="carriername">
+                <p><%= carrier.name %> </p>
+            </div>
+        </div>
+    </form>
+    <% }) %>
+
+</section>
+<%- include('partials/footer'); -%>

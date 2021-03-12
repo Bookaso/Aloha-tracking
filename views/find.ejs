@@ -1,0 +1,41 @@
+<%- include ("partials/header"); -%>
+<div class="find-info">
+    <section class="content-find">
+        <form class="find" action="/tracks/<%= thecarrier.key %> " method="POST">
+            <div class="image-find">
+                <img src=<%= thecarrier.imageURL %> alt="logo">
+            </div>
+            <label for="trackingNo">Tracking No</label>
+            <input type="text" name="trackingNo" placeholder="Tracking No" required>
+            <button type="submit">Search</button>
+        </form>
+    </section>
+    <br>
+    <% if (data.length!==0) { %>
+    <section class="content-info">
+        <div class="info">
+            <div class="info-tracking">
+            <h4>Tracking No: </h4>
+            <p> <%= data.trackingNo %> </p>
+            </div>
+            <div class="info-status">
+            <h4>Status:</h4>
+            <p><%= (data.currentStatus).substring(5, (data.currentStatus).length) %> </p>
+            </div>    
+        </div>
+        <div class="timeline">
+            <% data.timelines.forEach(timeline => { %>
+                <div class="timeline-info">
+                    <h4><%= timeline.date %> </h4>
+                    <% timeline.details.forEach(detail => { %>
+                        <p class="time">Time : <%= (detail.description).substring(0, 5) %> </p>
+                        <p class="status"><%= (detail.description).substring(5, (detail.description).length) %> </p>
+                    <% }) %>
+                    <br>
+                </div>
+            <% }) %>
+        </div>
+    </section>
+    <% } %>
+</div>
+<%- include ("partials/footer"); -%>

@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;400;700&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Kanit, Helvetica, sans-serif;
+}
+
+header {
+    background-color: #cdc733;
+    margin-bottom: 1em;
+    box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.header {
+    display: inline-block;
+    margin-left: 2em;
+    width: 50rem;
+    color: rgba(0, 0, 0, 0.7);
+    text-decoration: none;
+
+}
+
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    height: 90vh;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.541);
+    width: 200px;
+    height: 250px;
+    text-align: center;
+    border-radius: 5%;
+    margin: 1em;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(0.97);
+}
+
+.card:active {
+    background-color: rgba(247, 235, 222, 0.7);
+}
+
+img {
+    width: 80%;
+    height: auto;
+    border-radius: 50%;
+    /* padding: 0.2em; */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.carriername {
+    display: flex;
+    justify-content: center;
+    font-size: 120%;
+    font-weight: 500;
+}
+
+.find-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.content-find {
+    display: flex;
+    /* height: 90vh; */
+    justify-content: center;
+}
+.find {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    width: 200px;
+    height: 250px;
+}
+
+.find>input {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.content-info{
+    display: flex;
+    flex-direction: column;
+}
+.info{
+    margin: auto;
+    min-width: 60vw;
+    text-align: center;
+    padding: 20px;
+}
+.info-tracking{
+    display: flex;
+}
+.info-tracking>p{
+    margin-left: 5px;
+}
+.info-status{
+    display: flex;
+}
+.info-status>p{
+    margin-left: 5px;
+}
+.timeline{
+    margin: auto;
+    min-width: 60vw;
+    overflow-y: scroll;
+    line-height: 1.6;
+    height: 200px;
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 1);
+    /* height: 90vh; */
+}
+
+.timeline-info{
+border-top:1px solid rgba(0, 0, 0, 0.6) ;
+border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+}
+
+.time{
+    text-align: left;
+   
+} 
+.status{
+    font-weight: 200;
+}
+
+footer {
+    padding: 50px;
+    text-align: center;
+    color: rgb(150, 150, 150);
+}
+
+@media only screen and (min-width:1080px){
+    .timeline {
+    /* text-align: center; */
+    margin: auto;
+    min-width: 30vw;
+    }
+    .info{
+        min-width: 30vw;
+    }
+    .time{
+        /* text-align: center; */
+        /* margin:0 10%; */
+    }
+    .find-info{
+        flex-direction: row;
+        justify-content: center;
+    }
+    .content-info{
+      margin-left: 30px;
+    }
+}
